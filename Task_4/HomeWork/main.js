@@ -1,10 +1,10 @@
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 
-//     function ploscha(a, b){
-//         return a * b;
-//     }
-//     let x1 = ploscha(7,8);
-//     console.log(x1);
+    // function ploscha(a, b){
+    //     return a * b;
+    // }
+    // let x1 = ploscha(7,8);
+    // console.log(x1);
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 

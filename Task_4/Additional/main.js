@@ -1,15 +1,14 @@
 // - створити функцію, яка якщо приймає один аргумент, просто вивдоить його, якщо два аргументи - складає або конкатенує їх між собою.
 
-// function unknownarguments(){
-//    if (arguments.length ===1){
-//       let res = arguments[0]*2;
-//        console.log(res)
-//    }else if (arguments.length >1){
-//        let res = arguments[0]+arguments[1];
-//        console.log(res)
-//    }
-// }
-// unknownarguments(5,32)
+function unknownarguments(){
+   if (arguments.length ===1){
+       console.log(arguments[0])
+   }else if (arguments.length >1){
+       let res = arguments[0]+arguments[1];
+       console.log(res)
+   }
+}
+unknownarguments(5)
 
 // - створити функцію  яка приймає два масиви та скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
 //     EXAMPLE: [1,2,3,4] [2,3,4,5] результат [3,5,7,9]
