@@ -38,7 +38,7 @@
 //     for (let field of array) {
 //         for (let k in field) {
 //             newarray.push(k)
-////         }
+//         }
 //     }return newarray
 // }
 // massive(array)
