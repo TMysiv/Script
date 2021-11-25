@@ -62,7 +62,7 @@
 //     [0,1,2,3,4] => [1,2,3,4,0]
 //     [0,0,1,0]   => [1,0,0,0]
 
-// let array = [1,0,6,0,3] ;
+let array = [1,0,6,0,3] ;
 // let arr = [];
 // let fn = (array) =>{
 //     let nul = [];
@@ -79,6 +79,8 @@
 //     }return arr.concat(nul)
 // }
 // console.log(fn(array));
+
+
 
 
 
