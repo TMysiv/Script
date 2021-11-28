@@ -12,13 +12,14 @@
 //     this.year = year;
 //     this.maxSpeed=maxSpeed;
 //     this.engine = engine
-//
 //     this.drive = function (){
 //         console.log(`їдемо зі швидкістю ${this.maxSpeed} км/год `)
 //     }
 //     this.info = function (){
-//         for (let Key in this) {
-//             console.log(`${Key} -${this[Key]}`)
+//         for (let key in this) {
+//             if (typeof this[key] !=='function'){
+//             console.log(key, this[key])
+//         }
 //         }
 //     }
 //     this.increaseMaxSpeed = function (newSpeed){
@@ -34,6 +35,7 @@
 // }
 // let car = new Car('focus','Ford',2008,240,1.6);
 // car.drive();
+// car.info();
 // car.increaseMaxSpeed(50);
 // car.changeYear(2015)
 // car.addDriver('vasya ivanov')
@@ -56,12 +58,12 @@
 //         this.maxSpeed = maxSpeed;
 //         this.engine = engine;
 //     }
-//     drive (){
+//     drive ()  {
 //         console.log(`їдемо зі швидкістю ${this.maxSpeed} км/год `)
 //     }
 //     info (){
-//         for (let Key in this) {
-//             console.log(`${Key} -${this[Key]}`)
+//         for (let key in this) {
+//             console.log(key,this[key])
 //         }
 //     }
 //     increaseMaxSpeed (newSpeed){
@@ -80,6 +82,7 @@
 // car.increaseMaxSpeed(50);
 // car.changeYear(2015);
 // car.addDriver('petya')
+// car.info()
 
 
 

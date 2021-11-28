@@ -26,34 +26,70 @@
 // }
 
 class User {
-    constructor(id,name, userName, email,  phone, website) {
+    constructor(id,name, userName, email,adressStreet,adressSuite,adressCity,adressZipcode,geoLat,geoLng ,phone, website,nameCompany,catchPhraseCompany,bsCompany) {
         this.id = id;
-        this.name = name
+        this.name = name;
         this.userName = userName;
         this.email = email;
-        this.adress = function (street,suite,city,zipcode,){
-            this.street = street;
-            this.suite = suite;
-            this.city = city;
-            this.zipcode= zipcode;
-            this.geo =function (lat,lng){
-                this.lat = lat;
-                this.lng = lng;
-            }
-        }
+        this.adress = { street : adressStreet, suite :adressSuite, city: adressCity, zipcode : adressZipcode, geo:{lat:geoLat,lng:geoLng } }
         this.phone = phone;
         this.website = website;
-        this.company = function (companyName,catchPhrase,bs){
-            this.companyName=companyName;
-            this.catchPhrase=catchPhrase;
-            this.bs=bs;
-        }
-
+        this.company = {name : nameCompany, catchPhrase : catchPhraseCompany, bs : bsCompany }
     }
 }
-let user =new User(1,'Leanne Graham','Bret','Sincere@april.biz','1-770-736-8031 x56442','hildegard.org');
-user.adress('Kulas Light', 'Apt. 556', 'Gwenborough', '92998-3874');
-user.company('Romaguera-Crona','Multi-layered client-server neural-net','harness real-time e-markets')
-user.geo('-37.3159','81.1496')
-console.log(user)
+
+let user1 = new User(1,'Leanne Graham','Bret','Sincere@april.biz','Kulas Light','Apt. 556',
+    'Gwenborough', '92998-3874','-37.3159','81.1496','1-770-736-8031 x56442','hildegard.org','Romaguera-Crona',
+'Multi-layered client-server neural-net','harness real-time e-markets') ;
+console.log(user1)
+
+
+// -  Створити функцію конструктор / клас  який описує об'єкт тегу
+// Поля :
+//     -назва тегу ()
+// - опис його дій
+// - масив з атрибутами (2-3 атрибути максимум)
+// Кожен атрибут описати як окремий який буде містити
+// -назву атрибуту
+// -опис дії атрибуту
+// інформацію брати з htmlbook.ru
+//
+// Таким чином описати теги
+// -a
+// -div
+// -h1
+// -span
+// -input
+// -form
+// -option
+// -select
+// Приклад результуючого об'єкту
+// {
+//     titleOfTag: 'area',
+//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+//     attrs: [
+//     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
+//     {/*some props and values*/},
+//     {/*...*/},
+//     {/*...*/},
+// ]
+//
+// }
+
+class Teg {
+     constructor(titleOfTag, action,attrsSintaksis,attrsAtribyte,attrsSpecification,attrsDescription) {
+        this.titleOfTag = titleOfTag;
+        this.action = action;
+        this.attrs = [{sintaksis : attrsSintaksis,atribyte : attrsAtribyte},{specification : attrsSpecification,description: attrsDescription}]
+    }
+}
+
+let teg1 = new Teg('a',' устанавливает ссылку или якорь','<a href="URL">...</a>','Активация ссылки с помощью комбинации клавиш.',
+    'следует сделать ссылку','Тег <a> является одним из важных элементов HTML ');
+let teg2 = new Teg ('div','Задает выравнивание содержимого тега <div>.','<div>...</div>',
+    'Обязателен.','Чтобы не описывать каждый раз стиль внутри тега',' является блочным элементом')
+console.log(teg1,teg2)
+
+
+
 
