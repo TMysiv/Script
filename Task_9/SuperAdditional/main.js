@@ -94,27 +94,29 @@ let users = [{
 //     document.body.appendChild(wrap)
 // }
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement, розділивши всі властивості по своїм блокам , блок з адресою зробити окремим блоком, з блоками для кожної властивості
-// for (let user of users) {
-//     let wrap = document.createElement('div');
-//     for (const key in user) {
-//         let element = document.createElement('div');
-//         element.innerText = key;
-//         element.style.border ='1px solid yellow'
+for (let user of users) {
+    let wrap = document.createElement('div');
+    for (const key in user) {
+        let element = document.createElement('div');
+        element.innerText = key;
+        element.style.border ='1px solid yellow'
 
-//         wrap.appendChild(element)
-//         if (key === 'address') {
-//             for (const field in user.address) {
-//                 let smallDiv = document.createElement('div');
-//                 smallDiv.innerText = field;
+        wrap.appendChild(element)
+        if (key === 'address') {
+            for (const field in user.address) {
+                let smallDiv = document.createElement('div');
+                smallDiv.innerText = field;
 
-//                 element.appendChild(smallDiv)
-//             }
-//         }
-//     }
-//
-//     wrap.style.border = '3px solid black'
-//     document.body.appendChild(wrap)
-// }
+                element.appendChild(smallDiv)
+            }
+        }else {
+            console.log('false')
+        }
+    }
+
+    wrap.style.border = '3px solid black'
+    document.body.appendChild(wrap)
+}
 
 
 
@@ -140,59 +142,59 @@ let users = [{
 //     При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
 //     Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
 
-let rules = [
-    {
-        title: 'Первое правило Бойцовского клуба.',
-        body: 'Никому не рассказывать о Бойцовском клубе.'
-    },
-    {
-        title: 'Второе правило Бойцовского клуба.',
-        body: 'Никогда никому не рассказывать о Бойцовском клубе.'
-    },
-    {
-        title: 'Третье правило Бойцовского клуба.',
-        body: 'В схватке участвуют только двое.'
-    },
-    {
-        title: 'Четвертое правило Бойцовского клуба.',
-        body: 'Не более одного поединка за один раз.'
-    },
-    {
-        title: 'Пятое правило Бойцовского клуба.',
-        body: 'Бойцы сражаются без обуви и голые по пояс.'
-    },
-    {
-        title: 'Шестое правило Бойцовского клуба.',
-        body: 'Поединок продолжается столько, сколько потребуется.'
-    },
-    {
-        title: 'Седьмое правило Бойцовского клуба.',
-        body: 'Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок окончен.'
-    },
-    {
-        title: 'Восьмое и последнее правило Бойцовского клуба.',
-        body: 'Новичок обязан принять бой.'
-    },
-];
-let wrap = document.getElementById('wrap');
-wrap.style.border = '5px solid black'
-
-
-for (let rule of rules) {
-    let smallWrap = document.createElement('div');
-    smallWrap.style.border = '6px solid black'
-
-    let numberRule = document.createElement('div');
-    numberRule.innerText = rule.title;
-    numberRule.style.border = '3px solid green'
-
-    let textRule = document.createElement('div');
-    textRule.innerText = rule.body;
-    textRule.style.border = '3px solid pink'
-
-    smallWrap.append(numberRule,textRule)
-
-    wrap.append(smallWrap)
-}
+// let rules = [
+//     {
+//         title: 'Первое правило Бойцовского клуба.',
+//         body: 'Никому не рассказывать о Бойцовском клубе.'
+//     },
+//     {
+//         title: 'Второе правило Бойцовского клуба.',
+//         body: 'Никогда никому не рассказывать о Бойцовском клубе.'
+//     },
+//     {
+//         title: 'Третье правило Бойцовского клуба.',
+//         body: 'В схватке участвуют только двое.'
+//     },
+//     {
+//         title: 'Четвертое правило Бойцовского клуба.',
+//         body: 'Не более одного поединка за один раз.'
+//     },
+//     {
+//         title: 'Пятое правило Бойцовского клуба.',
+//         body: 'Бойцы сражаются без обуви и голые по пояс.'
+//     },
+//     {
+//         title: 'Шестое правило Бойцовского клуба.',
+//         body: 'Поединок продолжается столько, сколько потребуется.'
+//     },
+//     {
+//         title: 'Седьмое правило Бойцовского клуба.',
+//         body: 'Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок окончен.'
+//     },
+//     {
+//         title: 'Восьмое и последнее правило Бойцовского клуба.',
+//         body: 'Новичок обязан принять бой.'
+//     },
+// ];
+// let wrap = document.getElementById('wrap');
+// wrap.style.border = '5px solid black'
+//
+//
+// for (let rule of rules) {
+//     let smallWrap = document.createElement('div');
+//     smallWrap.style.border = '6px solid black'
+//
+//     let numberRule = document.createElement('div');
+//     numberRule.innerText = rule.title;
+//     numberRule.style.border = '3px solid green'
+//
+//     let textRule = document.createElement('div');
+//     textRule.innerText = rule.body;
+//     textRule.style.border = '3px solid pink'
+//
+//     smallWrap.append(numberRule,textRule)
+//
+//     wrap.append(smallWrap)
+// }
 
 

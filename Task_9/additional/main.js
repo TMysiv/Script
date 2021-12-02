@@ -266,6 +266,8 @@ for (let user of usersList) {
                     }
                 }
             }
+        }else{
+            console.log('false')
         }
         if (key === 'company') {
 
@@ -277,6 +279,8 @@ for (let user of usersList) {
 
                 elementDiv.appendChild(divCompany)
             }
+        }else{
+            console.log(false)
         }
         document.body.appendChild(wrap)
     }
