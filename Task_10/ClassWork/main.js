@@ -3,57 +3,33 @@
 // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
 
 // let form1 = document.createElement('form');
-// form1.style.display = 'flex';
-// form1.style.columnGap = '10px';
-// form1.style.paddingBottom = '10px';
-// form1.setAttribute('name', 'form1')
-//
+// form1.setAttribute('name','form1')
 // let form2 = document.createElement('form');
-// form2.style.display = 'flex';
-// form2.style.columnGap = '10px';
-// form2.style.paddingBottom = '10px';
-// form1.setAttribute('name', 'form2')
+// form2.setAttribute('name','form2')
+// let inputOne = document.createElement('input');
+// inputOne.setAttribute('name', 'one')
 //
-// let userName = document.createElement('input');
-// userName.style.background = 'silver';
-// userName.style.width = '160px';
-// userName.style.height = '30px';
-// userName.setAttribute('name', 'username')
+// let inputTwo = document.createElement('input');
+// inputTwo.setAttribute('name', 'two');
 //
-// let userAge = document.createElement('input');
-// userAge.style.background = 'silver';
-// userAge.style.width = '160px';
-// userAge.style.height = '30px';
-// userAge.setAttribute('name', 'userage')
+// let inputThree = document.createElement('input');
+// inputThree.setAttribute('name', 'three');
 //
-// let userEmail = document.createElement('input');
-// userEmail.style.background = 'green';
-// userEmail.style.width = '160px';
-// userEmail.style.height = '30px';
-// userEmail.setAttribute('name', 'useremail')
-//
-// let userPassWord = document.createElement('input');
-// userPassWord.style.background = 'green';
-// userPassWord.style.width = '160px';
-// userPassWord.style.height = '30px';
-// userPassWord.setAttribute('name', 'userpassword')
+// let inputFour = document.createElement('input');
+// inputFour.setAttribute('name', 'four');
 //
 // let button = document.createElement('button');
-// button.style.width = '60px';
-// button.style.height = '30px';
-// button.innerText = 'save'
+// button.innerText = 'approve'
 //
-//
-//
-// form1.append(userName,userAge);
-// form2.append(userEmail,userPassWord);
 // document.body.append(form1,form2,button);
+// form1.append(inputOne,inputTwo);
+// form2.append(inputThree,inputFour);
 //
-// button.onclick = function (){
-//     console.log(userName.value);
-//     console.log(userAge.value);
-//     console.log(userEmail.value);
-//     console.log(userPassWord.value)
+// button.onclick =function (){
+//     console.log(inputOne.value)
+//     console.log(inputTwo.value)
+//     console.log(inputThree.value)
+//     console.log(inputFour.value)
 // }
 
 
@@ -125,14 +101,30 @@
 //                 console.log('гарного дня')
 //             }
 //         }
-//
-//
 // }
-
-
 
 // - Сворити масив не цензцрних слів.
 //     Сворити інпут текстового типу.
 //     Потрібно перевіряти чи не містить ціле речення в собі погані слова.
 //     Кинути алерт з попередженням у випадку якщо містить.
 //     Перевірку робити при натисканні на кнопку
+
+// let arrBedWords = ['xxx','yyy','zzz','qqq'];
+//
+// let input = document.createElement('input');
+// input.setAttribute('type', 'text');
+// let button = document.createElement('button');
+// button.innerText = 'перевірка';
+// document.body.append(input,button)
+//
+// button.onclick = function (){
+//     let str = input.value;
+//     for (const element of arrBedWords) {
+//         if (str.includes(element)){
+//             alert('в речені є погане слово')
+//         }
+//         else{
+//             console.log('okay')
+//         }
+//     }
+// }
