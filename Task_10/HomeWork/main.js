@@ -17,25 +17,40 @@
 // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.
 //     При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
 
-// let btn = document.getElementsByClassName('btn')[0];
+// let input = document.createElement('input');
+// input.setAttribute('number', 'age')
+// let button = document.createElement('button');
+// button.innerText = 'approve'
 //
-// btn.onclick = function (){
-//     let age =   document.getElementById('age').value;
-//     if (age < 18  ){
-//         alert('Вам немає 18 років')
-//     }else {
-//         console.log('все добре. ви повнолітній')
+// document.body.append(input,button)
+//
+// button.onclick = function (){
+//     if (input.value < 18){
+//         alert('ви ще дуже малі')
+//     }
+//     else{
+//         console.log('все добре')
 //     }
 // }
 
 
 // - Создайте меню, которое раскрывается/сворачивается при клике
 
-// let div = document.getElementsByTagName('div')[0];
-// let h2 = document.getElementsByTagName('h2')[0];
+// let div = document.createElement('div');
+// div.classList.add('menu');
+// div.innerText = 'menu';
+// let ul = document.createElement('ul');
+// let li = document.createElement('li');
+// li.innerText = 'item'
+// let node1 = li.cloneNode(true);
+// let node2 = li.cloneNode(true);
 //
-// h2.onclick = function (){
-//     div.classList.toggle('hidden');
+// document.body.append(div);
+// div.append(ul);
+// ul.append(li,node1,node2)
+//
+// div.onclick = function (){
+//     ul.classList.toggle('hidden');
 // }
 
 
@@ -49,21 +64,23 @@
 //     Добавьте каждому комментарию по кнопке для сворачивания его body.
 
 
-// for (const element of arr) {
+// for (const element of arrComments) {
+//
 //     let div = document.createElement('div');
 //     let h2 = document.createElement('h2');
-//     h2.innerText = element.title;
 //     let p = document.createElement('p');
-//     p.innerText = element.body;
 //     let button = document.createElement('button');
-//     button.innerText = 'згорни мене'
+//     button.innerText = 'sometext'
+//
+//     h2.innerText = element.title;
+//     p.innerText = element.body;
+//
+//     document.body.append(div);
+//     div.append(h2,p,button);
 //
 //     button.onclick = function (){
 //         p.style.display = 'none'
 //     }
 //
-//
-//     div.append(h2,p,button)
-//     document.body.appendChild(div)
 // }
 
