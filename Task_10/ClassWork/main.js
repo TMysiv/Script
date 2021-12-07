@@ -109,22 +109,22 @@
 //     Кинути алерт з попередженням у випадку якщо містить.
 //     Перевірку робити при натисканні на кнопку
 
-// let arrBedWords = ['xxx','yyy','zzz','qqq'];
-//
-// let input = document.createElement('input');
-// input.setAttribute('type', 'text');
-// let button = document.createElement('button');
-// button.innerText = 'перевірка';
-// document.body.append(input,button)
-//
-// button.onclick = function (){
-//     let str = input.value;
-//     for (const element of arrBedWords) {
-//         if (str.includes(element)){
-//             alert('в речені є погане слово')
-//         }
-//         else{
-//             console.log('okay')
-//         }
-//     }
-// }
+let arrBedWords = ['xxx','yyy','zzz','qqq'];
+
+let input = document.createElement('input');
+input.setAttribute('type', 'text');
+let button = document.createElement('button');
+button.innerText = 'перевірка';
+document.body.append(input,button)
+
+button.onclick = function (){
+
+    for (const element of arrBedWords) {
+        if (input.value.includes(element)){
+            alert('в речені є погане слово')
+        }
+        else{
+            console.log('okay')
+        }
+    }
+}

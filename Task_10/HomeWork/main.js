@@ -36,22 +36,22 @@
 
 // - Создайте меню, которое раскрывается/сворачивается при клике
 
-// let div = document.createElement('div');
-// div.classList.add('menu');
-// div.innerText = 'menu';
-// let ul = document.createElement('ul');
-// let li = document.createElement('li');
-// li.innerText = 'item'
-// let node1 = li.cloneNode(true);
-// let node2 = li.cloneNode(true);
-//
-// document.body.append(div);
-// div.append(ul);
-// ul.append(li,node1,node2)
-//
-// div.onclick = function (){
-//     ul.classList.toggle('hidden');
-// }
+let div = document.createElement('div');
+div.classList.add('menu');
+div.innerText = 'menu';
+let ul = document.createElement('ul');
+let li = document.createElement('li');
+li.innerText = 'item'
+let node1 = li.cloneNode(true);
+let node2 = li.cloneNode(true);
+
+document.body.append(div);
+div.append(ul);
+ul.append(li,node1,node2)
+
+div.onclick = function (){
+    ul.classList.toggle('hidden');
+}
 
 
 
