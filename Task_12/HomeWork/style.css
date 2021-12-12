@@ -1,0 +1,21 @@
+.wrap_box{
+    border: 1px solid black;
+    width: 19%;
+}
+.wrap{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.wrapper_box{
+    border: 1px solid black;
+    width: 19%;
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.wrapper_box h2{
+    text-align: center;
+}

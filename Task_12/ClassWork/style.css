@@ -1,0 +1,12 @@
+.wrap_box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 48%;
+}
+.comments{
+    border: 1px solid black;
+}
+.main{
+    background: yellow;
+}

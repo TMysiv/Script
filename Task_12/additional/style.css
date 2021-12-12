@@ -1,0 +1,49 @@
+.content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap{
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    background: antiquewhite;
+
+}
+.wrap h2{
+    text-align: center;
+    color: red;
+}
+.btn{
+    width: 20%;
+    background: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+.box{
+    background: #e7dfdf;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.post{
+    width: 33%;
+    border: 1px solid black;
+}
+.post_btn{
+    width: 30%;
+    background: #ee00ff;
+    color: white;
+    cursor: pointer;
+}
+.box_comments{
+    background: khaki;
+}
+.commentDiv{
+    color: #2245bb;
+    border: 1px solid black;
+}
+
