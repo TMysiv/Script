@@ -1,6 +1,6 @@
-let money = 50;
+let money = 150;
 
-function getUp (get){
+function gettingUp (get){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (get){
@@ -20,7 +20,7 @@ function brushTeeth (time){
             }else {
                 reject ('треба бішти снідати')
             }
-        },500)
+        },1500)
     })
 
 }
@@ -43,7 +43,7 @@ function job (doMyWork){
         setTimeout(() => {
             if (doMyWork){
                 money +=500;
-                console.log(money +'hrn')
+                // console.log(money +'hrn')
                 resolve('відпрацював день')
             }else {
                 reject('сьогодні вихідний')
@@ -83,7 +83,7 @@ function watchTV (time){
     return new Promise((resolve, reject) => {
         setTimeout( () => {
             if (time < 24){
-               resolve('дивимось футбол');
+                resolve('дивимось футбол');
             }else {
                 reject('потрібно дягати спати');
             }
@@ -92,41 +92,37 @@ function watchTV (time){
 
 }
 
-function slipe (time){
+function goToBed (time){
     return new Promise((resolve, reject) => {
         setTimeout( () => {
-            if (time > 24){
-                console.log('спимо');
+            if (time > 23){
+                resolve('спимо');
             }else {
-                console.log('можна почитати книгу')
+                reject('можна почитати книгу')
             }
         },1000)
     })
 
 }
-getUp(true).then(getUP => {
-    console.log(getUP);
-    return brushTeeth(7.3);
-}).then(Teeth =>{
-    console.log(Teeth);
-    return breakfast(7.5);
-}).then(takeBreakfast =>{
-    console.log(takeBreakfast);
-    return job(true);
-}).then(work =>{
-    console.log(work);
-    return shop(300);
-}).then(product =>{
-    console.log(product);
-    return supper('yes');
-}).then(sup =>{
-    console.log(sup);
-    return watchTV(23)
-}).then(Tv =>{
-    console.log(Tv);
-    return slipe(23);
-}).then(sofa =>{
-    console.log(sofa)
-}).catch(err =>{
-    console.log('error',err)
-})
+
+ async function oneDay() {
+  const up = await gettingUp(true);
+  const teeth = await brushTeeth(7.2);
+  const eat = await breakfast(7.4);
+  const work = await job(true);
+  const product = await shop(300);
+  const sup = await supper('yes');
+  const tv = await watchTV(21);
+  const sleep = await goToBed(23.5);
+
+     console.log(up);
+     console.log(teeth);
+     console.log(eat);
+     console.log(work);
+     console.log(product);
+     console.log(sup);
+     console.log(tv);
+     console.log(sleep);
+
+}
+oneDay()
