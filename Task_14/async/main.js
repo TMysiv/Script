@@ -107,21 +107,20 @@ function goToBed (time){
 
  async function oneDay() {
   const up = await gettingUp(true);
-  const teeth = await brushTeeth(7.2);
-  const eat = await breakfast(7.4);
-  const work = await job(true);
-  const product = await shop(300);
-  const sup = await supper('yes');
-  const tv = await watchTV(21);
-  const sleep = await goToBed(23.5);
-
      console.log(up);
+  const teeth = await brushTeeth(7.2);
      console.log(teeth);
+  const eat = await breakfast(7.4);
      console.log(eat);
+  const work = await job(true);
      console.log(work);
+  const product = await shop(300);
      console.log(product);
+  const sup = await supper('yes');
      console.log(sup);
+  const tv = await watchTV(21);
      console.log(tv);
+  const sleep = await goToBed(23.5);
      console.log(sleep);
 
 }

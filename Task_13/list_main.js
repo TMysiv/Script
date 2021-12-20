@@ -37,5 +37,6 @@ button.innerText = 'Delete ALL';
 document.body.append(button);
 
 button.onclick = function (){
-     /// localStorage.clear()
+      localStorage.clear();
+      wrap.remove()
 }

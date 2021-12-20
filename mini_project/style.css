@@ -1,0 +1,82 @@
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.box{
+    width: 49%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background: #bfed64;
+
+}
+
+.box:hover{
+    background: red;
+}
+.title{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.btn{
+    width: 20%;
+    background: cornflowerblue;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid black;
+    text-decoration: none;
+}
+.userBox{
+    border: 1px solid black;
+    background: khaki;
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.liAddress{
+    font-size: 18px;
+}
+.liGeo{
+    font-size: 16px;
+}
+.button{
+    width: 90%;
+    cursor: pointer;
+    color: white;
+    background: cornflowerblue;
+
+}
+.postWrap{
+    background: #d2a3a3;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.divPost{
+    border: 1px solid black;
+    width: 20%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.linkPost{
+    color: white;
+    text-decoration: none;
+    background: cornflowerblue;
+    width: 30%;
+    text-align: center;
+    border: 1px solid black;
+
+}
