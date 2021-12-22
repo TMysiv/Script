@@ -27,23 +27,22 @@
 fetch('https://jsonplaceholder.typicode.com/users')
         .then(value => value.json())
         .then(users =>{
-            let wrap = document.createElement('div');
-            wrap.classList.add('wrap');
-            document.body.append(wrap)
+            let wrapUsers = document.createElement('div');
+            wrapUsers.classList.add('wrapUsers');
+            document.body.append(wrapUsers)
             for (let user of users) {
-                let box = document.createElement('div');
-                box.classList.add('box');
+                let boxUser = document.createElement('div');
+                boxUser.classList.add('boxUser');
                 let titleDiv = document.createElement('div');
-                titleDiv.classList.add('title');
+                titleDiv.classList.add('titleDiv');
                 titleDiv.innerHTML = `<h3>id - ${user.id}</h3> <h3>name - ${user.name}</h3>`;
 
                 let link = document.createElement('a');
                 link.classList.add('btn');
                 link.innerText = 'Details'
                 link.href = 'user-details.html?data=' + JSON.stringify(user)
-                box.append(titleDiv,link)
-                wrap.append(box);
-
+                boxUser.append(titleDiv,link)
+                wrapUsers.append(boxUser);
 
             }
 

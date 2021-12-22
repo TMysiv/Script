@@ -79,7 +79,7 @@ fetch('https://jsonplaceholder.typicode.com/users/' + parseData.id)
 
                                     let link = document.createElement('a');
                                     link.classList.add('linkPost');
-                                    link.href = 'user-details.html?data=' + JSON.stringify(post);
+                                    link.href = 'post-details.html?data=' + JSON.stringify(post);
                                     link.innerText = 'Details';
                                     divPost.append(link)
 
